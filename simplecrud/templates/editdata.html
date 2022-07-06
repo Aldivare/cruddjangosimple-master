@@ -17,33 +17,31 @@
 <body>
 
   <div class="container">
-    <h4 class="mt-4">CRUD Simpel menggunakan Django</h4>
-    <p class="mb-4">Aplikasi Create, Read, Update, Delete Menggunakan Django Framework</p>
     <form method="POST" action="/updatedata/{{ editdatanya.id }}">
       {% csrf_token %}
       <div class="card shadow-sm mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Edit Data Mahasiswa Universitas X</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Edit Data Pegawai</h6>
         </div>
         <div class="card-body">
-          <label>Nama Mahasiswa</label>
+          <label>Nama Pegawai</label>
           <div class="form-group">
-            <input type="text" class="form-control form-control-user" placeholder="Masukkan Nama Mahasiswa" name="nama"
+            <input type="text" class="form-control form-control-user" placeholder="Masukkan Nama Pegawai" name="nama"
               id="id_nama" value="{{ editdatanya.nama }}">
           </div>
-          <label>Nim Mahasiswa</label>
+          <label>NIP Pegawai</label>
           <div class="form-group">
-            <input type="text" class="form-control form-control-user" placeholder="Masukkan NIM Mahasiswa" name="nim"
+            <input type="text" class="form-control form-control-user" placeholder="Masukkan NIP Pegawai" name="nim"
               id="id_nim" value="{{ editdatanya.nim }}" maxlength="11">
           </div>
-          <label>Fakultas</label>
+          <label>Divisi Pekerjaan</label>
           <div class="form-group">
-            <input type="text" class="form-control form-control-user" placeholder="Masukkan Asal Fakultas Mahasiswa"
+            <input type="text" class="form-control form-control-user" placeholder="Masukkan Divisi Pekerjaan"
               name="fakultas" id="id_fakultas" value="{{ editdatanya.fakultas }}">
           </div>
-          <label>Jurusan</label>
+          <label>Alamat</label>
           <div class="form-group">
-            <input type="text" class="form-control form-control-user" placeholder="Masukkan Asal Jurusan Mahasiswa"
+            <input type="text" class="form-control form-control-user" placeholder="Masukkan Asal Alamat Pegawai"
               name="jurusan" id="id_jurusan" value="{{ editdatanya.jurusan }}">
           </div>
         </div>
@@ -56,7 +54,7 @@
     <footer class="mt-5 mb-3">
       <div class="container my-auto">
         <div class="text-center my-auto">
-          <span>developed by <a href="https://indrijunanda.gitlab.io" target="_blank" style="color: #424242;"><b>indrijunanda</b><a></span>
+          <span>developed by <a href="https://github.com/aldivare" target="_blank" style="color: #424242;"><b>Aldiva Restu</b><a></span>
         </div>
       </div>
     </footer> 
