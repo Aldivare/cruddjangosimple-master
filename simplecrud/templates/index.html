@@ -6,14 +6,14 @@
     #footer {
         position: fixed;
         bottom: 0;
-        width: 75%;
+        width: 73%;
         /* Height of the footer*/ 
         height: 40px;
     }
 </style>
-  <nav class="navbar navbar-light justify-content-between" style="background-color: #e3f2fd;">
-    <a class="navbar-brand text-primary m-0 font-weight-bold">Database Pegawai</a>
-    <a href="inputdata/" class="btn btn-primary mb-2"><i class="fas fa-upload"></i> Tambah Data Pegawai</a>
+  <nav class="navbar navbar-light justify-content-between" style="background-color: #2e3047;">
+    <a class="navbar-brand m-0 font-weight-bold" style="color: #3bba9c;">Database Pegawai</a>
+    <a href="inputdata/" class="btn mb-2" style="background-color:#3bba9c; color:#2e3047"><i class="fas fa-upload"></i> Tambah Data Pegawai</a>
   </nav>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,8 +32,8 @@
   <br> </br>
   <div class="container">
     <div class="card shadow-sm mb-4">
-      <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">List Data Pegawai</h6>
+      <div class="card-header py-3" style="background-color:#373a55">
+        <h6 class="m-0 font-weight-bold" style="color: #3bba9c;">List Data Pegawai</h6>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -59,7 +59,7 @@
                 <td>{{ tampilkandatanya.alamat }}</td>
                 <td>{{ tampilkandatanya.gender }}</td>
                 <td style="text-align: center">
-                  <a href="/editdata/{{ tampilkandatanya.id }}" class="btn btn-primary btn-sm" title="Edit"><i
+                  <a href="/editdata/{{ tampilkandatanya.id }}" class="btn btn-primary btn-sm" style="background-color:#3bba9c;" title="Edit"><i
                     class="fas fa-edit"></i></a>
                   <a href="/hapusdata/{{ tampilkandatanya.id }}" class="btn btn-danger btn-sm" title="Hapus"><i
                       class="fas fa-trash"></i></a>                  
