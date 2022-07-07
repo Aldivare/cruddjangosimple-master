@@ -2,14 +2,26 @@
 <html lang="en">
 
 <head>
-
+  <style>
+    #footer {
+        position: fixed;
+        bottom: 0;
+        width: 75%;
+        /* Height of the footer*/ 
+        height: 40px;
+    }
+</style>
+  <nav class="navbar navbar-light justify-content-between" style="background-color: #e3f2fd;">
+    <a class="navbar-brand text-primary m-0 font-weight-bold">Database Pegawai</a>
+    <a href="inputdata/" class="btn btn-primary mb-2"><i class="fas fa-upload"></i> Tambah Data Pegawai</a>
+  </nav>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   {% load static %}
-  <title>CRUD Simpel menggunakan Django</title>
+  <title>Data Pegawai</title>
   <link href="{% static 'fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'datatable/datatables.min.css' %}" rel="stylesheet">
@@ -17,12 +29,11 @@
 </head>
 
 <body>
+  <br> </br>
   <div class="container">
-    <h4 class="mt-4">CRUD Data Pegawai</h4>
-    <a href="inputdata/" class="btn btn-primary mb-2"><i class="fas fa-upload"></i> Tambah Data Pegawai</a>
     <div class="card shadow-sm mb-4">
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Pegawai</h6>
+        <h6 class="m-0 font-weight-bold text-primary">List Data Pegawai</h6>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -34,6 +45,7 @@
                 <th>NIP</th>
                 <th>Divisi Pekerjaan</th>
                 <th>Alamat</th>
+                <th>Jenis Kelamin</th>
                 <th style="width: 70px;">Aksi</th>
               </tr>
             </thead>
@@ -42,9 +54,10 @@
               <tr>
                 <td style="text-align: center">{{ forloop.counter }}</td>
                 <td>{{ tampilkandatanya.nama }}</td>
-                <td>{{ tampilkandatanya.nim }}</td>
-                <td>{{ tampilkandatanya.fakultas }}</td>
-                <td>{{ tampilkandatanya.jurusan }}</td>
+                <td>{{ tampilkandatanya.nip }}</td>
+                <td>{{ tampilkandatanya.divisi }}</td>
+                <td>{{ tampilkandatanya.alamat }}</td>
+                <td>{{ tampilkandatanya.gender }}</td>
                 <td style="text-align: center">
                   <a href="/editdata/{{ tampilkandatanya.id }}" class="btn btn-primary btn-sm" title="Edit"><i
                     class="fas fa-edit"></i></a>
@@ -60,7 +73,7 @@
     </div>
     <footer class="mt-5 mb-3">
       <div class="container my-auto">
-        <div class="text-center my-auto">
+        <div class="text-center my-auto" id="footer">
           <span>developed by <a href="https://github.com/aldivare" target="_blank" style="color: #424242;"><b>Aldiva Restu</b><a></span>
         </div>
       </div>

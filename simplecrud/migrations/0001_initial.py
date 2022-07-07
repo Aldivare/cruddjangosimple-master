@@ -16,9 +16,10 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('nama', models.CharField(max_length=50)),
-                ('nim', models.IntegerField(max_length=30)),
-                ('fakultas', models.CharField(max_length=50)),
-                ('jurusan', models.CharField(max_length=50)),
+                ('nip', models.IntegerField(max_length=30)),
+                ('divisi', models.CharField(max_length=50)),
+                ('alamat', models.CharField(max_length=50)),
+                ('gender', models.CharField(max_length=50)),
             ],
             options={
                 'db_table': 'simplecrud',

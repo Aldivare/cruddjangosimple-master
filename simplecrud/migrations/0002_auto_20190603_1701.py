@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='crudsimple',
-            name='nim',
+            name='nip',
             field=models.IntegerField(),
         ),
     ]

@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <nav class="navbar navbar-light justify-content-between" style="background-color: #e3f2fd;">
+    <a href="/" class="navbar-brand text-primary m-0 font-weight-bold">Database Pegawai</a>
+  </nav>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +18,7 @@
 </head>
 
 <body>
+  <br> </br>
 
   <div class="container">
     <form method="POST" action="/updatedata/{{ editdatanya.id }}">
@@ -31,18 +35,22 @@
           </div>
           <label>NIP Pegawai</label>
           <div class="form-group">
-            <input type="text" class="form-control form-control-user" placeholder="Masukkan NIP Pegawai" name="nim"
-              id="id_nim" value="{{ editdatanya.nim }}" maxlength="11">
+            <input type="text" class="form-control form-control-user" placeholder="Masukkan NIP Pegawai" name="nip"
+              id="id_nip" value="{{ editdatanya.nip }}" maxlength="11">
           </div>
           <label>Divisi Pekerjaan</label>
           <div class="form-group">
             <input type="text" class="form-control form-control-user" placeholder="Masukkan Divisi Pekerjaan"
-              name="fakultas" id="id_fakultas" value="{{ editdatanya.fakultas }}">
+              name="divisi" id="id_divisi" value="{{ editdatanya.divisi }}">
           </div>
           <label>Alamat</label>
           <div class="form-group">
             <input type="text" class="form-control form-control-user" placeholder="Masukkan Asal Alamat Pegawai"
-              name="jurusan" id="id_jurusan" value="{{ editdatanya.jurusan }}">
+              name="alamat" id="id_alamat" value="{{ editdatanya.alamat }}">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control form-control-user" placeholder="Masukkan Jenis Kelamin Pegawai"
+              name="gender" id="id_gender" value="{{ editdatanya.gender }}">
           </div>
         </div>
         <div class="card-footer">

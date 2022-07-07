@@ -9,24 +9,4 @@ class Migration(migrations.Migration):
         ('simplecrud', '0002_auto_20190603_1701'),
     ]
 
-    operations = [
-        migrations.RenameField(
-            model_name='crudsimple',
-            old_name='Alamat',
-            new_name='fakultas',
-        ),
-        migrations.RenameField(
-            model_name='crudsimple',
-            old_name='Divisi Pekerjaan',
-            new_name='jurusan',
-        ),
-        migrations.RenameField(
-            model_name='crudsimple',
-            old_name='Nama',
-            new_name='nama',
-        ),
-        migrations.RemoveField(
-            model_name='crudsimple',
-            name='NIP',
-        ),
-    ]
+    
