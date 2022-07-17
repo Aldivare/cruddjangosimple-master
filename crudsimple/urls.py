@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from simplecrud import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.tampildata),
     path('inputdata/',views.inputdata),
-    path('simpandata',views.simpandata),
-    path('hapusdata/<int:id>',views.hapusdata),
-    path('editdata/<int:id>',views.editdata),
-    path('updatedata/<int:id>',views.updatedata)    
+    path('hapusdata/<int:nip>',views.hapusdata),
+    path('editdata/<int:nip>',views.editdata),
+    path('lihatdata/<int:nip>',views.lihatdata),      
 ]
+if settings.DEBUG:  
+        urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)  
