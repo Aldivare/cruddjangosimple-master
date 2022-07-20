@@ -6,7 +6,6 @@ Kebutuhan Sistem :
 
 - Python 3.7.1
 - Django 
-- Mysql
 
 ### Cara Instalasi
 
@@ -14,7 +13,7 @@ Kebutuhan Sistem :
 *Clone* gunakan :
 
 ```
-git clone https://github.com/indrijunanda/cruddjangosimple.git
+https://github.com/abisetra/cruddjangosimple-master.git
 ```
 
 atau kamu bisa langsung download berbentuk format **.zip**

@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <style>
-    #footer {
-        position: fixed;
-        bottom: 0;
-        width: 73%;
-        /* Height of the footer*/ 
-        height: 40px;
-    }
-</style>
-  <nav class="navbar navbar-light justify-content-between" style="background-color: #2e3047;">
-    <a class="navbar-brand m-0 font-weight-bold" style="color: #3bba9c;">Database Pegawai</a>
-    <a href="inputdata/" class="btn mb-2" style="background-color:#3bba9c; color:#2e3047"><i class="fas fa-upload"></i> Tambah Data Pegawai</a>
-  </nav>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  {% load static %}
-  <title>Data Pegawai</title>
-  <link href="{% static 'fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'datatable/datatables.min.css' %}" rel="stylesheet">
-
-</head>
+{% extends 'icikiwir.html' %}
+{% block content %}
 
 <body>
   <br> </br>
@@ -46,7 +19,7 @@
                 <th>Divisi Pekerjaan</th>
                 <th>Alamat</th>
                 <th>Jenis Kelamin</th>
-                <th style="width: 70px;">Aksi</th>
+                <th style="width: 90px;">Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -59,10 +32,12 @@
                 <td>{{ tampilkandatanya.alamat }}</td>
                 <td>{{ tampilkandatanya.gender }}</td>
                 <td style="text-align: center">
-                  <a href="/editdata/{{ tampilkandatanya.id }}" class="btn btn-primary btn-sm" style="background-color:#3bba9c;" title="Edit"><i
+                  <a href="/editdata/{{ tampilkandatanya.nip }}" class="btn btn-primary btn-sm" style="background-color:#3bba9c;" title="Edit"><i
                     class="fas fa-edit"></i></a>
-                  <a href="/hapusdata/{{ tampilkandatanya.id }}" class="btn btn-danger btn-sm" title="Hapus"><i
-                      class="fas fa-trash"></i></a>                  
+                  <a href="/hapusdata/{{ tampilkandatanya.nip }}" class="btn btn-danger btn-sm" title="Hapus"><i
+                    class="fas fa-trash"></i></a>
+                  <a href="/lihatdata/{{ tampilkandatanya.nip }}" class="btn btn-warning btn-sm" title="Detail"><i
+                    class="fas fa-eye"></i></a>           
                 </td>
               </tr>
               {% endfor %}
@@ -71,23 +46,6 @@
         </div>
       </div>
     </div>
-    <footer class="mt-5 mb-3">
-      <div class="container my-auto">
-        <div class="text-center my-auto" id="footer">
-          <span>developed by <a href="https://github.com/aldivare" target="_blank" style="color: #424242;"><b>Aldiva Restu</b><a></span>
-        </div>
-      </div>
-    </footer> 
+    
   </div>
- <script src="{% static 'jquery/jquery.slim.min.js' %}"></script>
- <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
- <script src="{% static 'datatable/datatables.min.js' %}"></script> 
- <script>
-   $(document).ready(function () {
-     $('#dataTable').DataTable();
-   });
- </script>
-
-</body>
-
-</html>
+  {% endblock content %}
