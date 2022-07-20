@@ -13,7 +13,7 @@ Kebutuhan Sistem :
 *Clone* gunakan :
 
 ```
-https://github.com/abisetra/cruddjangosimple-master.git
+https://github.com/aldivare/cruddjangosimple-master.git
 ```
 
 atau kamu bisa langsung download berbentuk format **.zip**
